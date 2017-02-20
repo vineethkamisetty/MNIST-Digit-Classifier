@@ -17,7 +17,7 @@ test_imageset = test_imageset.astype(numpy.float)
 
 # normalizing the train image pixel values to 0 -> 1
 train_imageset = numpy.multiply(train_images, 1.0 / 255.0)
-print(len(train_imageset))
+#print(len(train_imageset))
 # normalizing the test image pixel values to 0 -> 1
 test_imageset = numpy.multiply(test_imageset, 1.0 / 255.0)
 
@@ -139,7 +139,7 @@ for i in range(20000):  # increase the value and check
     batch_imageset, batch_labelset = next_batch(50)  # each iteration we load 50 examples
     if i % 100 == 0:
         train_accuracy = accuracy.eval(feed_dict={x: batch_imageset, y_actual: batch_labelset, dropout_prob: 1.0})
-        # print("step %d, training accuracy %g" % (i, train_accuracy))
+        print("step %d, training accuracy %g" % (i, train_accuracy))
     train_step.run(feed_dict={x: batch_imageset, y_actual: batch_labelset, dropout_prob: 0.5})  # Dropout is active
     # with each connection at final layer is taken with probability of 0.5
 
