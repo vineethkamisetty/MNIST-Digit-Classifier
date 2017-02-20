@@ -35,7 +35,7 @@ train_labelset = one_hot.astype(numpy.uint8)  # setting the type as integer i.e,
 x = tf.placeholder(tf.float32, shape=[None, 784])  # 784 => image size
 y_actual = tf.placeholder(tf.float32, shape=[None, 10])  # 10  => output classes
 
-x_image = tf.reshape(x, [-1, 28, 28, 1])  # resize 1x784 -> 28x28
+x_image = tf.reshape(x, [-1, 28, 28, 1])  # resize the input vector 1x784 -> 28x28 matrix
 
 
 # Initialize the weights
