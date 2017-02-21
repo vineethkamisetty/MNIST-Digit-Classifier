@@ -15,11 +15,11 @@ Each image of the digit is 28 x 28 pixels, for a total of 784 pixels. Each pixel
 
 The training dataset(train.csv), has 785 columns. The first column, called "label", is the digit label. The rest of the 784 columns(from column index no:1 to Column index no:784) contain the pixel-values of the associated image. The structure of the image w.r.t pixels is shown as below :
 
-000 001 002 003 ... 026 027
-028 029 030 031 ... 054 055
- |   |   |   |  ...  |   |
-728 729 730 731 ... 754 755
-756 757 758 759 ... 782 783 
+000 001 002 003 ... 026 027 <br />
+028 029 030 031 ... 054 055 <br />
+ |   |   |   |  ...  |   | <br />
+728 729 730 731 ... 754 755<br />
+756 757 758 759 ... 782 783 <br />
 
 The test dataset(test.csv), is the same as the above set, except that it does not contain the "label" column only pixel values.
 
