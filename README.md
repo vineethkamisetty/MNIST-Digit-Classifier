@@ -16,8 +16,8 @@ Each image of the digit is 28 x 28 pixels, for a total of 784 pixels. Each pixel
 The training dataset(train.csv), has 785 columns. The first column, called "label", is the digit label. The rest of the 784 columns(from column index no:1 to Column index no:784) contain the pixel-values of the associated image. The structure of the image w.r.t pixels is shown as below :
 
 000 001 002 003 ... 026 027 <br />
-028 029 030 031 ... 054 055 
- |   |   |   |  ...  |   | <br />
+028 029 030 031 ... 054 055 <br />
+........................... <br />
 728 729 730 731 ... 754 755<br />
 756 757 758 759 ... 782 783 <br />
 
@@ -60,10 +60,10 @@ Changing the learning rate from 0.0001 to 0.001, did not result in any significa
 
 Changing the training iterations to 30,000 from 20,000, an increase of 10,000, suprisingly resulted in decrease in accuracy to 98.74. The possible reason might be that as we are feeding same images multiple times because iterations being more than number of images, there might be the a problem of overfitting resulting loss of generalization.
 
-
-Hardware : NVIDIA GTX 1060 <br />
-           RAM 6GB GDDR5   <br />
-           BASE CLOCK : 1506 MHz <br />
+Hardware :
+           NVIDIA GTX 1060 <br />
+           RAM : 6GB GDDR5   <br />
+           Base Clock : 1506 MHz <br />
            FLOPS : 4.4 TERAFLOPS<br />
            Memory BW : 192Gb/s<br />
            CUDA Cores : 1920<br />
