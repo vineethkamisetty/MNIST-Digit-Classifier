@@ -55,6 +55,7 @@ The NN has been trained with different models like GradientDescentOptimizer and 
 
 On Inclass dataset :<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;But, when trained and tested on the dataset (32000 training examples and 10000 testing examples) provided, an accuracy of 98.90 with the same learning rate 0.0001. The Offset in accuracy is mainly due to the lack of training examples in the later dataset compared to original dataset. But upon changing the learning rate to 0.001 resulted in a better accuracy of 99.08 in inclass dataset.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Changing the training iterations to 30,000 from 20,000, an increase of 10,000, suprisingly resulted in decrease in accuracy to 98.74. The possible reason might be that as we are feeding same images multiple times because iterations being more than number of images, there might be the a problem of overfitting resulting loss of generalization.
 
 It has been observed that training the network with same dataset multiple times results in different accuracies each time, even though the code has not be altered in any way.
