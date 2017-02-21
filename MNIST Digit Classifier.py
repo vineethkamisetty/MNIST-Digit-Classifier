@@ -135,7 +135,7 @@ def next_batch(batch_size):  # using mini-batches
 sess = tf.InteractiveSession()
 sess.run(tf.global_variables_initializer())
 
-for i in range(20000):  # increase the value and check
+for i in range(20000):  # testing iterations
     batch_imageset, batch_labelset = next_batch(50)  # each iteration we load 50 examples
     if i % 100 == 0:
         train_accuracy = accuracy.eval(feed_dict={x: batch_imageset, y_actual: batch_labelset, dropout_prob: 1.0})
