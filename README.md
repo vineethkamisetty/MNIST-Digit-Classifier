@@ -5,7 +5,7 @@ The Goal of the project is to make a Deep Neural Network for classifying Numeric
 
 The program is in python and the library/platform of choice is tensflow by Google. 
 
-DATASET ANALYSIS:
+DATASET ANALYSIS:<br />
 
 NOTE : The dataset (train.csv and test.csv) provided in the project folder is not the compelete MNIST dataset, but a subset of it.
 
@@ -23,7 +23,7 @@ The training dataset(train.csv), has 785 columns. The first column, called "labe
 
 The test dataset(test.csv), is the same as the above set, except that it does not contain the "label" column only pixel values.
 
-SETUP & TRAINING:
+SETUP & TRAINING:<br />
 
 As mentioned above, we are using tensorflow to do the heavylifting. First, we read provided data (both train and test files). To do that, we use "pandas" python library for reading .csv files. Then we split the pixel values and the corresponding Image Lables into two seperate variables usign 'iloc'.
 
@@ -47,13 +47,13 @@ We train the NN using mini-batches instead of using all the data which might be 
 
 But while testing we keep the value to 1.0 (rendering it inactive).
 
-OBSERVATIONS & ANALYSIS : 
+OBSERVATIONS & ANALYSIS : <br />
 
-On Original MNIST dataset : 
+On Original MNIST dataset : <br />
            Training the above Model on the 'train' MNIST dataset(42000 examples) and testing on test dataset (28000 examples) resulted in an accuracy of 99.08 with learning rate 0.0001.
 The NN has been trained with different models like GradientDescentOptimizer and RMSPropOptimizer on complete dataset resulting in performance of 97.2 and 99.02 respectively.
 
-On Inclass dataset :
+On Inclass dataset :<br />
            But, when trained and tested on the dataset (32000 training examples and 10000 testing examples) provided, an accuracy of 98.90 with the same learning rate 0.0001. The Offset in accuracy is mainly due to the lack of training examples in the later dataset compared to original dataset. But upon changing the learning rate to 0.001 resulted in a better accuracy of 99.08 in inclass dataset.
            Changing the training iterations to 30,000 from 20,000, an increase of 10,000, suprisingly resulted in decrease in accuracy to 98.74. The possible reason might be that as we are feeding same images multiple times because iterations being more than number of images, there might be the a problem of overfitting resulting loss of generalization.
 
